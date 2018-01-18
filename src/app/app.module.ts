@@ -9,13 +9,15 @@ import { TaskComponent } from './core/component/task/task.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ProjectDetailComponent } from './core/component/project-detail/project-detail.component';
 import { ProjectTitleComponent } from './core/component/project-title/project-title.component';
+import { DatePickerComponent } from './core/component/date-picker/date-picker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
     ProjectDetailComponent,
-    ProjectTitleComponent
+    ProjectTitleComponent,
+    DatePickerComponent
   ],
   imports: [
     BrowserModule,

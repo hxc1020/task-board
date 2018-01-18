@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, HostListener} from '@angular/core';
 
 @Component({
   selector: 'tb-project-title',
@@ -7,12 +7,23 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ProjectTitleComponent implements OnInit {
   active;
-
+  schedule;
+  isFocus: Boolean;
   constructor() {
   }
 
   ngOnInit() {
+    this.schedule = '开始于明天';
+    this.isFocus = false;
+  }
 
+  onMouseEnter() {
+    // lightblue
+    this.isFocus = true;
+  }
+
+  onMouseLeave() {
+    this.isFocus = false;
   }
 
   showDetail() {

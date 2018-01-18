@@ -1,7 +1,29 @@
-<div class="project-title">
-  <i *ngIf="!active" class="anticon anticon-down"></i>
-  <i *ngIf="active" class="anticon anticon-up"></i>
-  <a *ngIf="!active" (click)="showDetail()">显示详情</a>
-  <a *ngIf="active" (click)="hideDetail()">隐藏详情</a>
+<div class="project-title" fxLayout="column" fxLayoutGap="20px">
+
+  <div>
+   <h1>第一个项目</h1>
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="20px">
+
+    <div>
+      <i *ngIf="!active" class="anticon anticon-down"></i>
+      <i *ngIf="active" class="anticon anticon-up"></i>
+      <a *ngIf="!active" (click)="showDetail()">显示详情</a>
+      <a *ngIf="active" (click)="hideDetail()">隐藏详情</a>
+    </div>
+
+    <div>
+      <nz-popover [nzPlacement]="'bottom'" [nzTrigger]="'click'" >
+        <a nz-popover (mouseenter) = "onMouseEnter()" (mouseleave) = "onMouseLeave()">{{schedule}}</a>
+        <ng-template #nzTemplate>
+          <tb-date-picker></tb-date-picker>
+        </ng-template>
+      </nz-popover>
+      <i *ngIf="isFocus" class="anticon anticon-down"></i>
+    </div>
+
+  </div>
 </div>
+
 <tb-project-detail *ngIf="active"></tb-project-detail>

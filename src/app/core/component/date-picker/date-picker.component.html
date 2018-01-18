@@ -1,0 +1,18 @@
+<div fxLayout="column" fxLayoutGap="20px">
+  <div>
+    <nz-rangepicker [(ngModel)]="_dateRange" [nzFormat]="'YYYY-MM-DD'"></nz-rangepicker>
+  </div>
+  <div class="data-picker-action" fxLayoutAlign="center" fxLayoutGap="20px">
+    <div fxFlex="40">
+      <button nz-button [nzType]="'primary'" (click)="save()">
+        <span>确定</span>
+      </button>
+    </div>
+    <div fxFlex="40">
+      <button nz-button [nzType]="'default'" (click)="undo()">
+        <span>取消</span>
+      </button>
+    </div>
+  </div>
+</div>
+
