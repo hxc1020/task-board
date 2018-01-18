@@ -1,0 +1,12 @@
+.project-detail{
+  border-bottom: 1px solid #e7e7e7;
+  padding: 15px 1vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.project-completion{
+  color: #f4975e;
+  font-weight: 700;
+  font-size: small;
+}

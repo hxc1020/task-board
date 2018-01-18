@@ -1,0 +1,14 @@
+.project-title{
+  border-bottom: 1px solid #e7e7e7;
+  padding: 15px 1vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.project-title a{
+  color: #c7c7c7;
+}
+
+.project-title a:hover{
+  color: #2b2b2b;
+}

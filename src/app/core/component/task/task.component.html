@@ -1,0 +1,44 @@
+<div fxLayout='row' fxLayoutAlign="space-between" class="task" [ngStyle]="{backgroundColor: isFocus?'#a7d5ec4f':'white'}">
+
+  <div flex="90">
+    <div fxLayout="row">
+      <label nz-checkbox [(ngModel)]="_checked"  class="task-check">
+      </label>
+
+      <nz-avatar nzSize="small" nzText="林" class="task-avatar"></nz-avatar>
+
+      <div class="task-content">
+        <span class="task-tag">私有：</span>
+        <span>第一个任务</span>
+        <nz-badge [nzCount]="109"
+                  [nzStyle]="{backgroundColor: '#fff', color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset'}"></nz-badge>
+        <span class="task-content-due">- due： 明天</span>
+      </div>
+    </div>
+  </div>
+  <div flex="10"  class="task-action">
+    <div fxLayout="row">
+      <div *ngIf="isFocus">
+        <nz-tooltip [nzTitle]="'删除'" [nzPlacement]="'top'">
+          <i nz-tooltip class="anticon anticon-delete"></i>
+        </nz-tooltip>
+        <nz-tooltip [nzTitle]="'添加子任务'" [nzPlacement]="'top'">
+          <i nz-tooltip class="anticon anticon-file-add"></i>
+        </nz-tooltip>
+        <nz-tooltip [nzTitle]="'日程'" [nzPlacement]="'top'">
+          <i nz-tooltip class="anticon anticon-calendar"></i>
+        </nz-tooltip>
+        <nz-tooltip [nzTitle]="'复制'" [nzPlacement]="'top'">
+          <i nz-tooltip class="anticon anticon-copy"></i>
+        </nz-tooltip>
+      </div>
+      <div *ngIf="isFocus||isFlag">
+        <nz-tooltip [nzTitle]="'标记'" [nzPlacement]="'top'">
+          <i nz-tooltip class="anticon anticon-flag" (click)="changeFlag()"></i>
+        </nz-tooltip>
+      </div>
+    </div>
+  </div>
+</div>
+
+

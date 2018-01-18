@@ -1,0 +1,7 @@
+<div class="project-title">
+  <i *ngIf="!active" class="anticon anticon-down"></i>
+  <i *ngIf="active" class="anticon anticon-up"></i>
+  <a *ngIf="!active" (click)="showDetail()">显示详情</a>
+  <a *ngIf="active" (click)="hideDetail()">隐藏详情</a>
+</div>
+<tb-project-detail *ngIf="active"></tb-project-detail>

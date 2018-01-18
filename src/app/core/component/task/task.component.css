@@ -1,0 +1,40 @@
+:host ::ng-deep .ant-badge {
+  margin-right: 16px;
+}
+
+.task{
+  width: 100%;
+  font-size: small;
+  padding: 4px 4px 2px 10px;
+  border-radius:4px;
+  margin: 2px 2px 2px 1vw;
+}
+
+.task-avatar{
+  margin-left: 0.5vw;
+}
+
+.task-check{
+  margin-bottom: -2px;
+}
+
+.task-content{
+  cursor:pointer;
+}
+
+.task-content-due{
+  color: #f17e94;
+}
+
+.task-tag{
+  margin-left: 0.5vw;
+  font-weight: 700;
+}
+
+.task-action{
+  cursor:pointer;
+}
+
+.task-action i {
+  margin-right: 3px;
+}
