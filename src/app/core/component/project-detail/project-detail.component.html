@@ -1,19 +1,51 @@
 <div class="project-detail" fxLayout="row" fxLayoutGap="20px">
-  <div>
-    1
+
+  <div *ngIf="editable" fxFlex="30" fxLayout="column" fxLayoutGap="20px">
+
+    <div>
+      <nz-input [(ngModel)]="detail" [nzType]="'textarea'" [nzRows]="'3'" [nzPlaceHolder]="''"></nz-input>
+    </div>
+
+    <div>
+      <button nz-button [nzType]="'primary'" (click)="saveDetail()">
+        <span>保存</span>
+      </button>
+      <button nz-button [nzType]="'default'" (click)="undo()">
+        <span>取消</span>
+      </button>
+    </div>
+
   </div>
+
+  <div *ngIf="!editable" fxFlex="30" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center">
+
+    <div (click)="edit()" fxFlex="70">
+      <!--TODO markdown -->
+      <h1>{{detail}}</h1>
+    </div>
+
+    <div fxLayoutAlign="start" fxLayout="row">
+      <span class="project-detail-edit-by"><b>lin</b> 最后编辑于 <b>5</b> 分钟前</span>
+      <div class="project-detail-edit"><a (click)="edit()">编辑</a></div>
+    </div>
+
+  </div>
+
   <div fxLayout="row" fxLayoutGap="25px">
+
     <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="10px">
       <div>
         <nz-progress [ngModel]="10" [nzType]="'circle'" [nzWidth]="80"></nz-progress>
       </div>
       <div fxLayoutAlign="center"><span>当前进度</span></div>
     </div>
+
     <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="10px">
       <span class="project-completion"> 进度落后 </span>
       <span><b>20</b> 剩余</span>
       <span><b>0</b> 已完成</span>
     </div>
+
   </div>
 </div>
 

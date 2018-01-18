@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 
 @Component({
@@ -7,12 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-detail.component.css']
 })
 export class ProjectDetailComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-
+  editable: Boolean;
+  detail;
+  constructor() {
   }
 
+  ngOnInit() {
+    this.editable = false;
+    this.detail = 'test';
+  }
 
+  edit(){
+    this.editable = true;
+  }
+
+  saveDetail(){
+    this.editable = false;
+  }
+
+  undo() {
+    this.editable = false;
+  }
 }

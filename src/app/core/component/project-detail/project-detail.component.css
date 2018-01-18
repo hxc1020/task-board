@@ -3,10 +3,26 @@
   padding: 15px 1vw;
   margin-left: 1vw;
   margin-right: 1vw;
+  min-height: 150px;
 }
 
 .project-completion{
   color: #f4975e;
   font-weight: 700;
   font-size: small;
+}
+
+.project-detail-edit{
+  border-left: 1px solid #e7e7e7;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-left: 5px;
+}
+
+.project-detail-edit-by{
+  color: #b7b7b7;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
