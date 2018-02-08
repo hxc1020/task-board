@@ -10,6 +10,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { ProjectDetailComponent } from './core/component/project-detail/project-detail.component';
 import { ProjectTitleComponent } from './core/component/project-title/project-title.component';
 import { DatePickerComponent } from './core/component/date-picker/date-picker.component';
+import { TaskDetailComponent } from './core/component/task-detail/task-detail.component';
+import { TaskDetailToolComponent } from './core/component/task-detail/task-detail-tool/task-detail-tool.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { DatePickerComponent } from './core/component/date-picker/date-picker.co
     TaskComponent,
     ProjectDetailComponent,
     ProjectTitleComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    TaskDetailComponent,
+    TaskDetailToolComponent
   ],
   imports: [
     BrowserModule,

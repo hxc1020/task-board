@@ -1,0 +1,20 @@
+<div fxLayout="column">
+
+  <!--TOOL-->
+  <div>
+    <tb-task-detail-tool></tb-task-detail-tool>
+  </div>
+
+  <div fxLayout="row" class="task-detail-title">
+      <label nz-checkbox [(ngModel)]="_checked" (ngModelChange)="_console($event)"></label>
+      <span style="margin-left: 10px;">第一个任务</span>
+  </div>
+
+  <div class="task-detail-font-color task-detail-nav">
+    <span><a>团队</a> - <a>项目</a> > <a>前端任务</a></span>
+  </div>
+
+  <div class="task-detail-font-color task-detail-nav">
+    <span>担当者： <a><b>你</b></a>    |    <a>添加截止日期</a></span>
+  </div>
+</div>

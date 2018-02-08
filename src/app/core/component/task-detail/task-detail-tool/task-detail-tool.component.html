@@ -1,0 +1,27 @@
+<div fxLayout="row" fxLayoutAlign="center end" class="task-detail-tool">
+  <div>
+    <button nz-button [nzType]="'default'" [nzShape]="'circle'">
+      <i class="anticon anticon-close"></i>
+    </button>
+  </div>
+  <div fxFlex></div>
+  <div>
+    <button nz-button [nzType]="'default'">
+      <i class="anticon anticon-link"></i>
+    </button>
+    <nz-popover [nzTrigger]="'click'" [nzPlacement]="'bottom'">
+      <button nz-popover nz-button [nzType]="'default'">
+        <i class="anticon anticon-ellipsis"></i>
+      </button>
+      <ng-template #nzTemplate>
+        <div class="task-tool-link"><i class="anticon anticon-wifi"></i><a>订阅任务</a></div>
+        <div class="task-tool-link"><i class="anticon anticon-flag"></i><a>标记任务</a></div>
+        <div class="task-tool-link"><i class="anticon anticon-delete"></i><a>删除任务</a></div>
+      </ng-template>
+    </nz-popover>
+
+    <button nz-button [nzType]="'default'">
+      <i class="anticon anticon-edit"></i> 编辑
+    </button>
+  </div>
+</div>

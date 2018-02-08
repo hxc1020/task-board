@@ -1,0 +1,25 @@
+.task-detail-title{
+  font-size: larger;
+  font-weight: bold;
+  padding: 5px 20px;
+}
+
+.task-detail-nav{
+  padding-left: 50px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.task-detail-font-color{
+  color: #c7c7c7;
+}
+
+a{
+  color: #c7c7c7;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+a:hover{
+  color: #2b2b2b;
+}

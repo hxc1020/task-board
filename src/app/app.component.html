@@ -1,8 +1,29 @@
-<div style="width: 60vw;">
-  <tb-project-title></tb-project-title>
-</div>
-<div style="width: 60vw;">
-  <tb-task></tb-task>
-  <tb-task></tb-task>
-  <tb-task></tb-task>
+<div fxLayout="column" class="main">
+  <!--TOOLBAR-->
+  <div fxFlex="3" class="toolbar">
+    <h1>TOOLBAR</h1>
+  </div>
+
+  <!--MAIN-->
+  <div fxLayout="row" fxFlex="grow"  fxLayoutAlign="stretch">
+    <!--NAV-->
+    <div fxFlex="10" class="task-nav">
+
+    </div>
+    <!--TO-DO LIST -->
+    <div fxLayout="column" fxLayoutGap="20px" fxFlex="grow">
+      <div style="width: 100%;">
+        <tb-project-title></tb-project-title>
+      </div>
+      <div style="width: 100%;">
+        <tb-task></tb-task>
+        <tb-task></tb-task>
+        <tb-task></tb-task>
+      </div>
+    </div>
+    <!--TO-DO LIST DETAIL-->
+    <div class="task-detail">
+      <tb-task-detail></tb-task-detail>
+    </div>
+  </div>
 </div>
